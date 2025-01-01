@@ -1,0 +1,29 @@
+.productsContVert {
+    width: 60%;
+    margin-bottom: 30px;
+}
+.productsUlVert {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productsContHor {
+    width: 100%;
+}
+
+.productsUlHor {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    scroll-snap-type: x;
+    overflow-x: scroll; 
+}
+
+.productsUlHor::-webkit-scrollbar {
+    height: 7px;
+    width: 4px;
+}
+.productsUlHor::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 20px;
+}

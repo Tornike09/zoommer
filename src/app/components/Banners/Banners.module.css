@@ -1,0 +1,12 @@
+.mainCont {
+    width: 100%;
+    display: flex;
+    flex: 1 200px;
+    justify-content: space-between;
+    margin: 40px 0 0 40px;
+}
+.mainCont img {
+    width: 22%;
+    height: auto;
+    border-radius: 12px;
+}

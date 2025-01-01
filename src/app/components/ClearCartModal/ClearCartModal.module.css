@@ -1,0 +1,88 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999999;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blurCont {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #000;
+    opacity: .6;
+}
+
+.modalCont {
+    max-width: 420px;
+    width: 90%;
+    height: 32vh;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 14px;
+    border: 1px solid #ed6e40;
+    padding: 10px;
+}
+
+.modalHead {
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.modalHead h3 {
+    text-align: center;
+    padding-bottom: 14px;
+}
+
+.modalHead img {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
+
+.clearCont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clearCont h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+.clearCont div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.clearCont button {
+    padding: 16px 0;
+    width: 46%;
+    border-radius: 14px;
+    border: 1px solid #ed6e40;
+    background-color: #fff;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.orange {
+    background-color: #ec5e2a !important;
+    color: #fff !important;
+}
