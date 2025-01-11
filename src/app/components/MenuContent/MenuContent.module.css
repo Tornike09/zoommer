@@ -1,0 +1,9 @@
+.manuContentWrapper {
+  width: 96%;
+  margin-left: 30px;
+}
+
+.manuContentWrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+}

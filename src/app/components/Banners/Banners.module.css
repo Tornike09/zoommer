@@ -1,12 +1,70 @@
-.mainCont {
-    width: 100%;
-    display: flex;
-    flex: 1 200px;
-    justify-content: space-between;
-    margin: 40px 0 0 40px;
+.swiperWrapper {
+  width: 80%;
+  margin-top: 40px;
 }
-.mainCont img {
-    width: 22%;
-    height: auto;
-    border-radius: 12px;
+
+.swiperWrapper ul {
+  height: auto;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.swiperWrapper li {
+  width: 24%;
+  height: auto;
+}
+
+.swiperWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.respSwiperWrapper {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.respSwiperWrapper ul {
+  height: auto;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  scroll-snap-type: x;
+  overflow-x: scroll;
+}
+
+.respSwiperWrapper img {
+  width: auto;
+  height: 135px;
+  border-radius: 12px;
+}
+
+.respSwiperWrapper {
+  display: none;
+}
+
+.respSwiperWrapper ul::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+.respSwiperWrapper ul::-webkit-scrollbar-thumb {
+  background-color: #e49f86;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+  .swiperWrapper {
+    display: none;
+  }
+
+  .respSwiperWrapper {
+    display: block !important;
+  }
+
+  .respSwiperWrapper ul {
+    width: 98% !important;
+  }
 }

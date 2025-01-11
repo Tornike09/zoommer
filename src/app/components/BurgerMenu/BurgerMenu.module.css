@@ -1,0 +1,103 @@
+.burgerWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition-duration: 0.5s;
+}
+
+.menuHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.menuHeader > div {
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuHeader svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.search {
+  background-color: #fff;
+  border: 1px solid #ec5e2a;
+  width: 90%;
+  padding: 12px;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 90%;
+}
+
+.menuNavigation {
+  margin-top: 30px;
+  margin-left: 4px;
+  display: flex;
+}
+
+.menuNavigation h4 {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--black-08);
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.menuNavigation > ul > li {
+  width: 74px;
+  height: 78px;
+  margin-top: 2px;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 3px solid #f1f1f1;
+}
+
+.menuNavigation a {
+  height: 100%;
+  display: flex;
+}
+
+.navBarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  margin-right: 4px;
+}
+
+.active {
+  border-left: 3px solid #ec5e2a !important;
+}
+
+.menuNavigation > div {
+  width: 100%;
+}
+
+@media screen and (min-width: 1023px) {
+  .burgerWrapper {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import notFound from '../../images/404.webp'
+import notFound from '../app/images/404.webp'
 import { Header } from './components/Header/Header'
 import Link from 'next/link'
 import styles from './not-found.module.css'

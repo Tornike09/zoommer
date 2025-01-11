@@ -1,86 +1,100 @@
 .mobileItem {
-    max-width: 200px;
-    width: 90%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: sans-serif;
-    margin-top: 16px;
+  min-width: 180px;
+  width: auto;
+  height: auto;
+  font-family: sans-serif;
+  margin-top: 16px;
+}
+
+.mobileItem > a {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .imageCont {
-    width: 100px;
-    height: 140px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 10px;
+  width: 100px;
+  height: 140px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
 }
 
 .mobileItem h4 span {
-    color: #ec5e2a;
+  color: #ec5e2a;
+}
+
+.mobileItem p {
+  height: 30px;
+  margin-top: 8px;
+  color: #000;
 }
 
 .prevPrice {
-    color: #9b9b9b !important;
-    font-size: 12px;
-    text-decoration: line-through;
-    margin-left: 10px;
+  color: #9b9b9b !important;
+  font-size: 12px;
+  text-decoration: line-through #ec5e2a;
+  margin-left: 10px;
 }
 
 .cartButtons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .cartButtons button {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    outline: none;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-right: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
 }
 
 .addToCart {
-    background-color: #f28f6a !important;
+  background-color: #f28f6a !important;
+  min-width: 110px !important;
 }
 
 .cartButtons span {
-    color: black;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 10px;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
 }
 
+.addToCart img {
+  margin-right: 10px;
+}
 .cartButtons img {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .giftIcon {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .giftIcon div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 26px;
-    height: 26px;
-    background-color: rgb(255, 160, 36);
-    padding: 5px;
-    border-radius: 50%;
-    margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  background-color: rgb(255, 160, 36);
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 8px;
 }
 
 .giftIcon img {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }

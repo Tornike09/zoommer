@@ -4,5 +4,7 @@ export interface IProduct {
     title: string;
     image: string;
     previousPrice: number;
-    quantity: number
+    quantity: number;
+    brand: string;
+    category: string
 }
