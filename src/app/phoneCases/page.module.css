@@ -12,3 +12,19 @@
     justify-content: space-between;
 
 }
+
+.filterCont {
+    width: 450px;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .cont {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .filterCont {
+        width: auto;
+    }
+}

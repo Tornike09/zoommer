@@ -1,0 +1,253 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper > div {
+  max-width: 1200px;
+  width: 96%;
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+
+.mainCont {
+  width: 60%;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+
+.imageAndTitle {
+  width: 50%;
+  height: 100%;
+}
+
+.imageCont {
+  width: 70%;
+  background-color: aqua;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.about {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.optionTitle {
+  font-weight: 350;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgb(0, 0, 0, 6);
+}
+
+.optionValue {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgb(0, 0, 0, 7);
+}
+
+.priceCont {
+  width: 36%;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 10px;
+}
+
+.priceCont > div {
+  height: auto;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.newPrice {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ec5e2a;
+}
+
+.prevPrice {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #515151;
+  text-decoration: line-through #ec5e2a;
+  margin-left: 20px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.options div {
+  width: 186px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.options div h4 {
+  display: flex;
+}
+
+.options p,
+.options svg {
+  font-size: 14px;
+  margin: 0 5px;
+  font-weight: 400;
+  color: #727272;
+}
+
+.operations {
+  border-bottom: none !important;
+}
+
+.operations > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.operations button {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #ec5e2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.compare {
+  background-color: #e5e5e5 !important;
+  color: #000 !important;
+  width: 46% !important;
+  margin-right: 16px;
+}
+
+.add {
+  background-color: rgba(236, 94, 42, 0.5) !important;
+  color: #000 !important;
+  width: 46% !important;
+}
+
+.respPriceCont {
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #ec5e2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.respPriceCont > div {
+  display: flex;
+  gap: 10px;
+}
+
+.respPriceCont {
+  display: none;
+}
+
+.compCont {
+  padding: 12px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+}
+
+.compCont img {
+    width: 14px;
+    height: 14px;
+}
+
+.buyBtn {
+    padding: 13px 20px;
+    color: #ec5e2a;
+    background-color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+}
+
+.respPrice {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.respPrevPrice {
+    color: #fff;
+    text-decoration: line-through #fff;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1220px) {
+  .options div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .mainCont {
+    width: 100%;
+  }
+  .priceCont {
+    display: none;
+  }
+  .respPriceCont {
+    display: flex;
+  }
+}
+
+@media screen  and (max-width: 500px){
+  .mainCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .imageAndTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    width: 80%;
+  }
+}

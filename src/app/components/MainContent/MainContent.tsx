@@ -7,6 +7,7 @@ import branchBanner from "../../../app/images/fe25de5d-cb03-4b12-ac44-9c2cfbcdbd
 import TBCBanner from "../../../app/images/ffa8a998-5b32-4da5-b6fe-c026a6ba013b_Thumb.webp";
 import { Swiper } from "../Swiper/Swiper";
 import { Footer } from "../Footer/Footer";
+import { RespNavBar } from "../RespNavBar/RespNavBar";
 
 export const MainContent = () => {
   return (
@@ -36,6 +37,7 @@ export const MainContent = () => {
         <Image className={styles.branchBanner} src={TBCBanner} alt="" />
       </div>
       <Footer />
+      <RespNavBar />
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { navBar } from "../../datas/navBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
 import { changeCategory } from "../../../../redux/slices/categorySlice/categorySlice";
-import { RootState } from "../../../../redux/store";
 import Link from "next/link";
 
 export const MainNavBar = () => {

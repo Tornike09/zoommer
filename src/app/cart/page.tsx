@@ -13,23 +13,28 @@ import Image from "next/image";
 import { useState } from "react";
 import { ClearCartModal } from "../components/ClearCartModal/ClearCartModal";
 import Link from "next/link";
+
 const Cart = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
+  // Access cart items from Redux store
   const cartItems = useSelector((state: RootState) => state.cart);
 
+  // Calculate total number of items in the cart
   const totalItems =
     cartItems?.reduce(
       (acc: number, item: IProduct) => acc + item.quantity,
       0
     ) || 0;
 
+  // Calculate total price of items in the cart
   const totalPrice =
     cartItems?.reduce(
       (acc: number, item: IProduct) => acc + item.price * item.quantity,
       0
     ) || 0;
 
+  // Handle modal toggling
   const handleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -37,7 +42,7 @@ const Cart = () => {
   return (
     <div className={styles.wrapper}>
       <Header />
-      {cartItems.length > 0 ? (
+      {cartItems && cartItems.length > 0 ? (
         <div className={styles.mainCont}>
           <div className={styles.cartHeading}>
             <h2>შენს კალათაში {totalItems} ნივთია</h2>
@@ -86,10 +91,11 @@ const Cart = () => {
         </div>
       ) : (
         <div className={styles.emptyBag}>
-          <Image src={image} alt="" />
+          <Image src={image} alt="Empty cart" />
         </div>
       )}
     </div>
   );
 };
+
 export default Cart;

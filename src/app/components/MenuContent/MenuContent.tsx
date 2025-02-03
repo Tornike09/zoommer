@@ -16,7 +16,6 @@ export const MenuContent: React.FC<IMenuContentProps> = ({
   imagesCategory,
 }) => {
   const [products, setProducts] = useState<IProduct[]>([]);
-  console.log(imagesCategory);
 
   useEffect(() => {
     const getProducts = async () => {

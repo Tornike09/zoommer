@@ -1,0 +1,134 @@
+.filterWrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  transition-duration: 0.5s;
+}
+
+.blurCont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.mainCont {
+  background-color: #fff;
+  width: 80%;
+  position: relative;
+  padding: 20px;
+  overflow-y: auto; 
+  z-index: 1;
+  border-left: 1px solid #e1e1e1; 
+  box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.menuHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.menuHeader > div {
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuHeader svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 90%;
+}
+
+.menuNavigation {
+  margin-top: 30px;
+  margin-left: 4px;
+  display: flex;
+}
+
+.menuNavigation h4 {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--black-08);
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.menuNavigation > ul > li {
+  width: 74px;
+  height: 78px;
+  margin-top: 2px;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 3px solid #f1f1f1;
+}
+
+.menuNavigation a {
+  height: 100%;
+  display: flex;
+}
+
+.navBarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  margin-right: 4px;
+}
+
+.active {
+  border-left: 3px solid #ec5e2a !important;
+}
+
+.menuNavigation > div {
+  width: 100%;
+}
+
+.brandsHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.brandsHeader h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(87, 87, 87);
+}
+
+.brandsHeader img {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  color: rgb(87, 87, 87);
+}
+
+@media screen and (min-width: 1023px) {
+  .burgerWrapper {
+    display: none;
+  }
+}

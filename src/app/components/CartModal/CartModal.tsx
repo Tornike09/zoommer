@@ -7,10 +7,12 @@ import { RootState } from "../../../../redux/store";
 import { CartItemInModal } from "../CartItemInModal/CartItemInModal";
 import { IProduct } from "@/app/types";
 import Link from "next/link";
+
 interface ICartModalProps {
-  closeModal: () => void;
+  closeCartModal: () => void;
 }
-export const CartModal: React.FC<ICartModalProps> = ({ closeModal }) => {
+
+export const CartModal: React.FC<ICartModalProps> = ({ closeCartModal }) => {
   const cartItems = useSelector((state: RootState) => state.cart);
 
   const totalPrice =
@@ -18,6 +20,7 @@ export const CartModal: React.FC<ICartModalProps> = ({ closeModal }) => {
       (acc: number, item: IProduct) => acc + item.price * item.quantity,
       0
     ) || 0;
+
   const totalItems =
     cartItems?.reduce(
       (acc: number, item: IProduct) => acc + item.quantity,
@@ -25,7 +28,12 @@ export const CartModal: React.FC<ICartModalProps> = ({ closeModal }) => {
     ) || 0;
 
   return (
-    <div className={styles.cartModalCont} onMouseLeave={closeModal}>
+    <div
+      className={styles.cartModalCont}
+      onMouseLeave={closeCartModal}
+      aria-modal="true"
+      role="dialog"
+    >
       <div className={styles.cartModalContent}>
         <p>
           <span>კალათა</span>
@@ -41,7 +49,10 @@ export const CartModal: React.FC<ICartModalProps> = ({ closeModal }) => {
               </ul>
             </div>
           ) : (
-            <Image src={emptyBag} alt="" />
+            <div className={styles.emptyState}>
+              <Image src={emptyBag} alt="Empty cart illustration" />
+              <p>კალათა ცარიელია</p>
+            </div>
           )}
         </div>
         <h5>

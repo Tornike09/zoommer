@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   transition-duration: 0.5s;

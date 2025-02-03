@@ -17,19 +17,28 @@ interface ICartItemsProps {
 
 export const CartItemInModal: React.FC<ICartItemsProps> = ({ cartItem }) => {
   const dispatch = useDispatch();
+
   const removeItem = (cartItemId: number) => {
-    dispatch(removeFromCart(cartItemId));
+    dispatch(removeFromCart(cartItemId)); // Ensure the ID is a number if you're using a number ID
   };
+
   const incrementItemQty = (cartItemId: number) => {
     dispatch(incrementQty(cartItemId));
   };
+
   const decrementItemQty = (cartItemId: number) => {
     dispatch(decrementQty(cartItemId));
   };
+
   return (
     <li className={styles.cartItem}>
       <div className={styles.cartItemCont}>
-        <Image src={cartItem.image} alt="" width={70} height={70} />
+        <Image
+          src={cartItem.image}
+          alt={`Image of ${cartItem.title}`}
+          width={70}
+          height={70}
+        />
         <div className={styles.aboutProduct}>
           <span>{cartItem.title}</span>
           <span>{cartItem.price} ₾</span>
@@ -38,21 +47,24 @@ export const CartItemInModal: React.FC<ICartItemsProps> = ({ cartItem }) => {
           <FontAwesomeIcon
             icon={faTrashCan}
             onClick={() => removeItem(cartItem._id)}
+            aria-label={`Remove ${cartItem.title} from cart`}
           />
           <h4 className={styles.changeQty}>
-            <span
+            <button
+              aria-label={`Decrease quantity of ${cartItem.title}`}
               className={styles.operation}
               onClick={() => decrementItemQty(cartItem._id)}
             >
               -
-            </span>
+            </button>
             <span>{cartItem.quantity}</span>
-            <span
+            <button
+              aria-label={`Increase quantity of ${cartItem.title}`}
               className={styles.operation}
               onClick={() => incrementItemQty(cartItem._id)}
             >
               +
-            </span>
+            </button>
           </h4>
         </div>
       </div>

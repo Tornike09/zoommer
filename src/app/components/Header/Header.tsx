@@ -16,14 +16,14 @@ import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
-import { faUser as faUserRegular } from '@fortawesome/free-regular-svg-icons'; // Import regular version
+import { faUser as faUserRegular } from "@fortawesome/free-regular-svg-icons"; // Import regular version
 
 export const Header = () => {
   const [isCartModalOpen, setIsCartModalOpen] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [screenWidth, setScreenWidth] = useState<number>(0); // Track screen width
 
   const router = usePathname();
-
   const cartItems = useSelector((state: RootState) => state.cart);
 
   const totalItems =
@@ -32,22 +32,29 @@ export const Header = () => {
       0
     ) || 0;
 
-  const toggleCartModal = () => {
-    setIsCartModalOpen(!isCartModalOpen);
-  };
+  const openCartModal = () => setIsCartModalOpen(true);
+  const closeCartModal = () => setIsCartModalOpen(false);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const currenScreenSize = document.documentElement.clientWidth;
+  // Track window size with useEffect
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
 
   return (
     <>
       <div className={styles.headerNavBar}>
         <div className={styles.navBarItems}>
           <div>
-            <Image src={icon} alt="" />
+            <Image src={icon} alt="Phone icon for customer service" />
             <h4>*7007 / +995 (32) 2 60 30 60</h4>
           </div>
           <div>
@@ -67,34 +74,34 @@ export const Header = () => {
             <BurgerMenu closeMenu={toggleMenu} isMenuOpen={isMenuOpen} />
           )}
           <Link href={"/"}>
-            <Image src={mainLogo} alt="" />
+            <Image src={mainLogo} alt="Main logo" />
           </Link>
           <div className={styles.navCont}>
-            <Image src={dots} alt="" />
+            <Image src={dots} alt="Navigation dots icon" />
             <h4>ნავიგაცია</h4>
           </div>
           <div className={styles.search}>
-            <Image src={search} alt="" />
-            <input type="text" placeholder="ძიება" />
+            <Image src={search} alt="Search icon" />
+            <input type="text" placeholder="ძიება" aria-label="Search" />
           </div>
           <div className={styles.spaceBtwn}></div>
           <div
             className={styles.cartCont}
-            onMouseEnter={toggleCartModal}
-            onMouseLeave={toggleCartModal}
+            onMouseEnter={openCartModal}
+            onMouseLeave={closeCartModal} 
+            aria-haspopup="true"
+            aria-expanded={isCartModalOpen ? "true" : "false"}
           >
             <Link href={"/cart"}>
               <h4>
-                <Image src={cart} alt="" />
+                <Image src={cart} alt="Shopping cart icon" />
                 <p>კალათა</p>
               </h4>
             </Link>
-            {isCartModalOpen &&
-              currenScreenSize > 1024 &&
-              !(router === "/cart") && (
-                <CartModal closeModal={toggleCartModal} />
-              )}
-            {cartItems.length > 0 && (
+            {isCartModalOpen && screenWidth > 1024 && !(router === "/cart") && (
+              <CartModal closeCartModal={closeCartModal} />
+            )}
+            {(cartItems.length > 0) && (!isMenuOpen) && (
               <div className={styles.productQty}>
                 <span>{totalItems}</span>
               </div>

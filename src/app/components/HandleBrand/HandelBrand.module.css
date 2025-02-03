@@ -1,0 +1,23 @@
+.brandItem div {
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.brandItem img {
+  width: 24px;
+  height: 24px;
+}
+
+.brandItem input {
+  width: 30px;
+  border-radius: 14px;
+}
+
+.brandItem p {
+  font-weight: 350;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 20px;
+  color: rgb(87, 87, 87);
+}

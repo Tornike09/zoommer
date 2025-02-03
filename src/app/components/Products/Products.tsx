@@ -21,64 +21,65 @@ export const Products: React.FC<IProductCategoryProps> = ({
   gift,
   hardCodeCat,
 }) => {
-  const [products, setProduct] = useState<IProduct[]>([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
   const dispatch = useDispatch();
   const brand = useSelector((state: RootState) => state.brand);
+  const min = useSelector((state: RootState) => state.minPrice)
+  const max = useSelector((state: RootState) => state.maxPrice)
 
-  if (category === "") {
-    category = hardCodeCat;
-  }
+  const currentCategory = category || hardCodeCat; // Handle category fallback
 
   useEffect(() => {
     const getProducts = async () => {
+      setLoading(true); // Set loading state
+
       try {
         const response = await axios.get(
-          `https://jsonserver.reactbd.com/${category}`
+          `https://jsonserver.reactbd.com/${currentCategory}`
         );
 
         if (response.data) {
-          setProduct(response.data);
+          setProducts(response.data);
+          dispatch(handleProducts(response.data)); // Dispatch products to Redux store
         }
       } catch (err) {
-        console.log(err);
+        console.error(err);
+      } finally {
+        setLoading(false); // Reset loading state
       }
     };
-    getProducts();
-  }, [category]);
 
-  useEffect(() => {
-    if (products) {
-      dispatch(handleProducts(products));
-    }
-  }, [products]);
+    getProducts();
+  }, [currentCategory, dispatch]); // Only run when category changes
 
   return (
-    <>
-      {
-        <div
+    <div
+      className={
+        listType === "vertical"
+          ? styles.productsContVert
+          : styles.productsContHor
+      }
+    >
+      <div>
+        {loading && <div className={styles.loading}>Loading...</div>}{" "}
+        {/* Loading Spinner */}
+        <ul
           className={
             listType === "vertical"
-              ? styles.productsContVert
-              : styles.productsContHor
+              ? styles.productsUlVert
+              : styles.productsUlHor
           }
         >
-          <ul
-            className={
-              listType === "vertical"
-                ? styles.productsUlVert
-                : styles.productsUlHor
-            }
-          >
-            {products.length > 0 &&
-              products.map(
-                (product) =>
-                  (brand === "" || product.brand === brand) && (
-                    <Product key={product._id} product={product} gift={gift} />
-                  )
-              )}
-          </ul>
-        </div>
-      }
-    </>
+          {products.length > 0 &&
+            products.map(
+              (product) =>
+                (brand === "" || product.brand === brand) && (max === 0 || (min < product.price && product.price < max)) && (
+                  <Product key={product._id} product={product} gift={gift} />
+                )
+            )}
+        </ul>
+      </div>
+    </div>
   );
 };

@@ -17,46 +17,41 @@ interface IBurgerMenuProps {
   closeMenu: () => void;
   isMenuOpen: boolean;
 }
+
 export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
   closeMenu,
   isMenuOpen,
 }) => {
   const category = useSelector((state: RootState) => state.category);
-
   const [positionLeft, setPositionLeft] = useState<number>(-1000);
-  const [positionRight, setPositionRight] = useState<number>();
-  const [imagesCategory, setImagesCategory] = useState<string>(category);
 
   const router = usePathname();
-
-  useEffect(() => {
-    setPositionLeft(isMenuOpen ? 0 : -1000);
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    setPositionRight(isMenuOpen ? -1000 : 0);
-  }, [isMenuOpen]);
-
   const dispatch = useDispatch();
+
   const handleNavCategory = (category: string) => {
     dispatch(changeCategory(category));
   };
 
-  const handleCategoryOnMouseOver = (category: string) => {
-    setImagesCategory(category);
-  };
+  // Set positionLeft based on whether the menu is open or not
+  useEffect(() => {
+    setPositionLeft(isMenuOpen ? 0 : -1000);
+  }, [isMenuOpen]);
 
   return (
     <div
       className={styles.burgerWrapper}
-      style={{ left: `${positionLeft}px`, right: `${positionRight}px` }}
+      style={{ left: `${positionLeft}px` }}
     >
       <div>
         <div className={styles.menuHeader}>
           <div>
-            <FontAwesomeIcon icon={faX} onClick={closeMenu} />
+            <FontAwesomeIcon
+              icon={faX}
+              onClick={closeMenu}
+              aria-label="Close menu"
+            />
             <div className={styles.search}>
-              <Image src={search} alt="" />
+              <Image src={search} alt="Search icon" />
               <input type="text" placeholder="ძიება" />
             </div>
           </div>
@@ -67,16 +62,16 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
               <li
                 key={navBarItem.id}
                 onClick={() => handleNavCategory(navBarItem.category)}
-                onMouseOver={() =>
-                  handleCategoryOnMouseOver(navBarItem.category)
-                }
                 className={
                   router === `/${navBarItem.route}` ? styles.active : ""
                 }
               >
                 <Link href={navBarItem.route}>
                   <div className={styles.navBarItem}>
-                    <FontAwesomeIcon icon={navBarItem.icon} />
+                    <FontAwesomeIcon
+                      icon={navBarItem.icon}
+                      aria-label={navBarItem.title}
+                    />
                     <h4>{navBarItem.title}</h4>
                   </div>
                 </Link>
@@ -84,7 +79,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
             ))}
           </ul>
           <div>
-            <MenuContent imagesCategory={imagesCategory} />
+            <MenuContent imagesCategory={category} />
           </div>
         </div>
       </div>

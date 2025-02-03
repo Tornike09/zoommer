@@ -1,9 +1,18 @@
 .manuContentWrapper {
   width: 96%;
+  height: 100vh;
   margin-left: 30px;
 }
 
 .manuContentWrapper ul {
   display: flex;
   flex-wrap: wrap;
+  width: auto;
+  height: 80%;
+  scroll-snap-type: y;
+  overflow-y: scroll;
+}
+
+.manuContentWrapper ul::-webkit-scrollbar-thumb {
+  display: none;
 }

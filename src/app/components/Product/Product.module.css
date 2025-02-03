@@ -1,9 +1,10 @@
 .mobileItem {
-  min-width: 180px;
+  min-width: 200px;
   width: auto;
   height: auto;
   font-family: sans-serif;
   margin-top: 16px;
+  margin-bottom: 20px;
 }
 
 .mobileItem > a {
@@ -57,11 +58,6 @@
   margin-right: 8px;
 }
 
-.addToCart {
-  background-color: #f28f6a !important;
-  min-width: 110px !important;
-}
-
 .cartButtons span {
   color: black;
   font-size: 14px;
@@ -97,4 +93,13 @@
 .giftIcon img {
   width: 16px;
   height: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .mobileItem {
+    min-width: 150px;
+    width: auto;
+    height: auto;
+    
+  }
 }

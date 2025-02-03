@@ -1,0 +1,58 @@
+.filterWrapper {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.brandsHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.brandsHeader h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(87, 87, 87);
+}
+
+.brandsHeader img {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  color: rgb(87, 87, 87);
+}
+
+.respFilterCont {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .filterWrapper {
+    width: 100%;
+  }
+
+  .filterWrapper > div {
+    display: none;
+  }
+
+  .respFilterCont {
+    display: block !important;
+    width: 100%;
+  }
+
+  .respFilterCont > div {
+    width: 30%;
+  }
+
+  .respFilterCont > div > button {
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 16px;
+    padding: 8px 20px;
+    cursor: pointer;
+  }
+}

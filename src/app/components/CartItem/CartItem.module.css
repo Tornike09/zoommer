@@ -43,6 +43,17 @@
   margin-left: 10px;
 }
 
+.trashIcom {
+  padding: 6px;
+  transition: 0.3s;
+  border-radius: 50%;
+
+}
+
+.trashIcom:hover{
+  background-color: #e0e0e0;
+}
+
 .qtyCont {
   display: flex;
   align-items: center;
@@ -61,6 +72,15 @@
   background-color: #ec5e2a;
   padding: 4px;
   border-radius: 16px;
+  display: flex;
+}
+
+.changeQty button {
+  background-color: #ec5e2a;
+  border: none;
+  color: #ffffff;
+  padding: 2px 10px;
+  border-radius: 10px;
 }
 
 .changeQty span {

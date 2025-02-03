@@ -1,0 +1,58 @@
+.wrapper {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        border-top: 1px solid #b0b0b0;
+        background-color: rgb(255, 255, 255);
+        position: sticky;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .wrapper > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .wrapper h4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper svg,
+    .wrapper img {
+        width: 20px;
+        height: 20px;
+        color: #5b5b5b;
+    }
+
+    .wrapper span {
+        font-weight: 500;
+        color: #3a3a3a;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .percentageIcon {
+        position: absolute;
+        background-color: #ec5e2a;
+        bottom: 36px;
+        padding: 14px;
+        color: #fff !important;
+        border-radius: 50%;
+    }
+
+    .percentageIcon + span {
+        margin-top: 26px;
+    }
+}

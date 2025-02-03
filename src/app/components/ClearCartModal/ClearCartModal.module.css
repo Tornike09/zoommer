@@ -24,7 +24,7 @@
 .modalCont {
   max-width: 420px;
   width: 90%;
-  height: 24vh;
+  height: auto;
   background-color: rgb(255, 255, 255);
   position: relative;
   border-radius: 14px;

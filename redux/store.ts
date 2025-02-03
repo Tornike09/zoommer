@@ -3,6 +3,8 @@ import categorySlice from "./slices/categorySlice/categorySlice";
 import cartSlice from './slices/cartSlice/cartSlice'
 import productsSlice from './slices/productsSlice/productsSlice'
 import brandSlice from './slices/brandSlice/brandSlice'
+import minPriceSlice from './slices/minPriceSlice/minPriceSlice'
+import maxPriceSlice from './slices/maxPriceSlice/maxPriceSlice'
 
 
 export const store = configureStore({
@@ -10,7 +12,9 @@ export const store = configureStore({
         category: categorySlice,
         cart: cartSlice,
         products: productsSlice,
-        brand: brandSlice
+        brand: brandSlice,
+        minPrice: minPriceSlice,
+        maxPrice: maxPriceSlice
     }
 })
 

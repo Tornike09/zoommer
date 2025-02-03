@@ -1,0 +1,28 @@
+.addToCart {
+    background-color: #f28f6a !important;
+    min-width: 110px !important;
+    display: flex;
+    gap: 10px;
+}
+
+.addToCartBig {
+    width: 60% !important;
+    background-color: #f28f6a !important;
+    color: #000 !important;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.respAddToCart {
+    padding: 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .addToCartBig {
+        width: 70% !important;
+    }
+}

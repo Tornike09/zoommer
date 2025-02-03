@@ -44,6 +44,13 @@
   margin-right: 10px;
 }
 
+.qtyCont button {
+  background-color: #ec5e2a;
+  border: none;
+  color: #fff;
+  padding: 0 4px;
+}
+
 .qtyCont svg {
   margin: 10px 4px;
   cursor: pointer;
