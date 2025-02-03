@@ -33,7 +33,7 @@ export const Footer = () => {
       </div>
       <div className={styles.copyRight}>
         <div>
-          <h3>Copyright © 2023 Zoommer.ge. All rights reserved.</h3>
+          <h3>Copyright © 2025 Zoommer.ge. All rights reserved.</h3>
         </div>
       </div>
     </div>
