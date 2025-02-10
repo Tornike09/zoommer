@@ -1,9 +1,9 @@
 "use client";
 import { useSelector } from "react-redux";
-import styles from "./CartComp.module.css";
+import styles from "./CartItems.module.css";
 import { RootState } from "../../../../redux/store";
 import { CartItem } from "../CartItem/CartItem";
-export const CartComp = () => {
+export const CartItems = () => {
   const cartItems = useSelector((state: RootState) => state.cart);
   return (
     <div className={styles.wrapper}>

@@ -47,10 +47,9 @@
   padding: 6px;
   transition: 0.3s;
   border-radius: 50%;
-
 }
 
-.trashIcom:hover{
+.trashIcom:hover {
   background-color: #e0e0e0;
 }
 

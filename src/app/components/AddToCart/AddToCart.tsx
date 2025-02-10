@@ -11,7 +11,7 @@ import { AlreadyInCart } from "../AlreadyInCart/AlreadyInCart";
 
 interface IAddToCartProps {
   product: IProduct;
-  type: "big" | "small" | ''; // Restricting to specific string values
+  type: "big" | "small" | ""; // Restricting to specific string values
 }
 
 export const AddToCart: React.FC<IAddToCartProps> = ({ product, type }) => {

@@ -24,10 +24,10 @@
   width: 80%;
   position: relative;
   padding: 20px;
-  overflow-y: auto; 
+  overflow-y: auto;
   z-index: 1;
-  border-left: 1px solid #e1e1e1; 
-  box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1); 
+  border-left: 1px solid #e1e1e1;
+  box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menuHeader {

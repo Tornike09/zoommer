@@ -12,7 +12,7 @@ export const FilterBrand = () => {
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(true);
   const [filterModal, setFilterModal] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState<number>(0);
-  
+
   //open or close dropdown menu
   const toggleDropDown = () => {
     setIsDropDownOpen(!isDropDownOpen);
@@ -29,7 +29,7 @@ export const FilterBrand = () => {
     handleResize(); // Initial set on mount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-    
+
   return (
     <div className={styles.filterWrapper}>
       <div>
@@ -40,7 +40,7 @@ export const FilterBrand = () => {
             alt="Toggle Dropdown"
           />
         </div>
-        {(screenWidth > 768) && <HandleBrand isDropDownOpen={isDropDownOpen}/>}
+        {screenWidth > 768 && <HandleBrand isDropDownOpen={isDropDownOpen} />}
       </div>
       <div className={styles.respFilterCont}>
         <div>
@@ -48,8 +48,8 @@ export const FilterBrand = () => {
             <Image src={filterIcon} alt="" />
             <span>ფილტრი</span>
           </button>
-          {filterModal && (
-           (screenWidth < 768) &&  <RespFilter closeMenu={toggleFilterModal} isMenuOpen={true} />
+          {filterModal && screenWidth < 768 && (
+            <RespFilter closeMenu={toggleFilterModal} isMenuOpen={true} />
           )}
         </div>
       </div>

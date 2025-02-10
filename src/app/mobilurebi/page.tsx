@@ -30,7 +30,7 @@ const Phones = () => {
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
+
   return (
     <div>
       <Header />

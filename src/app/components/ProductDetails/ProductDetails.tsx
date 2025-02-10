@@ -6,7 +6,6 @@ import { ImageModal } from "../ImageModal/ImageModal";
 import { priceOptions } from "@/app/datas/priceOptions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import compare from "../../../app/images/compare.svg";
-import cartIcon from "../../../app/images/cart-button.svg";
 import Image from "next/image";
 import { AddToCart } from "../AddToCart/AddToCart";
 

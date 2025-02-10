@@ -1,53 +1,53 @@
 .wrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .priceInput {
-    display: flex;
-    flex-direction: column;
-    width: 49%;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  margin-top: 30px;
 }
 
 .input {
-    display: flex;
-    gap: 10px;
-    border: 1px solid #ec5e2a;
-    padding: 10px;
-    border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid #ec5e2a;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .input input {
-    width: 70px;
-    border: none;
-    outline: none;
+  width: 70px;
+  border: none;
+  outline: none;
 }
 
 .priceInput input[type="range"] {
-    accent-color: #ec5e2a;
-    margin-top: 20px;
+  accent-color: #ec5e2a;
+  margin-top: 20px;
 }
 
-@media screen and (max-width: 768px){
-    .wrapper {
-        width: auto;
-        display: flex;
-        flex-wrap: wrap;
-    }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .input {
-        width: 160px;
-    }
+  .input {
+    width: 160px;
+  }
 
-    .priceInput input[type="range"] {
-        width: 160px;
-    }
+  .priceInput input[type="range"] {
+    width: 160px;
+  }
 }
 
 @media screen and (max-width: 466px) {
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }

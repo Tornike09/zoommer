@@ -10,7 +10,7 @@ import { ProductDetails } from "@/app/components/ProductDetails/ProductDetails";
 const Post = () => {
   const [product, setProduct] = useState<IProduct>();
   const { id, category } = useParams();
-  const params = useParams()
+  const params = useParams();
 
   useEffect(() => {
     const fetchProductData = async () => {
@@ -27,11 +27,11 @@ const Post = () => {
     fetchProductData();
   }, [id, category]);
 
-  return <div>
-    <Header/>
+  return (
     <div>
-      {product && <ProductDetails product={product}/>}
+      <Header />
+      <div>{product && <ProductDetails product={product} />}</div>
     </div>
-  </div>;
+  );
 };
 export default Post;

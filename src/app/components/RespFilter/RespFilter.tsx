@@ -32,7 +32,7 @@ export const RespFilter: React.FC<IBurgerMenuProps> = ({
   }, [isMenuOpen]);
 
   console.log(positionRight);
-  
+
   return (
     <div
       className={styles.filterWrapper}
@@ -60,7 +60,7 @@ export const RespFilter: React.FC<IBurgerMenuProps> = ({
             </div>
             <div>
               <HandleBrand isDropDownOpen={isDropDownOpen} />
-              <FilterPrice/>
+              <FilterPrice />
             </div>
           </div>
         </div>

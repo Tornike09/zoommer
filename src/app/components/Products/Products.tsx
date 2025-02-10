@@ -25,8 +25,8 @@ export const Products: React.FC<IProductCategoryProps> = ({
   const [loading, setLoading] = useState<boolean>(false);
   const dispatch = useDispatch();
   const brand = useSelector((state: RootState) => state.brand);
-  const min = useSelector((state: RootState) => state.minPrice)
-  const max = useSelector((state: RootState) => state.maxPrice)
+  const min = useSelector((state: RootState) => state.minPrice);
+  const max = useSelector((state: RootState) => state.maxPrice);
 
   const currentCategory = category || hardCodeCat; // Handle category fallback
 
@@ -74,7 +74,8 @@ export const Products: React.FC<IProductCategoryProps> = ({
           {products.length > 0 &&
             products.map(
               (product) =>
-                (brand === "" || product.brand === brand) && (max === 0 || (min < product.price && product.price < max)) && (
+                (brand === "" || product.brand === brand) &&
+                (max === 0 || (min < product.price && product.price < max)) && (
                   <Product key={product._id} product={product} gift={gift} />
                 )
             )}

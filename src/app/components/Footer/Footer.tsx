@@ -1,15 +1,10 @@
-'use client'
 import Image from "next/image";
 import styles from "./Footer.module.css";
 import { footerData } from "@/app/datas/footer";
-import { useState } from "react";
 
 export const Footer = () => {
-  
-
   return (
     <div className={styles.footerWrapper}>
-      
       <div className={styles.footerCont}>
         <div>
           {footerData.map((footerItem) => (

@@ -38,10 +38,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
   }, [isMenuOpen]);
 
   return (
-    <div
-      className={styles.burgerWrapper}
-      style={{ left: `${positionLeft}px` }}
-    >
+    <div className={styles.burgerWrapper} style={{ left: `${positionLeft}px` }}>
       <div>
         <div className={styles.menuHeader}>
           <div>

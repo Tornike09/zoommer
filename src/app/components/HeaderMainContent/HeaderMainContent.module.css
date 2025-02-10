@@ -1,0 +1,136 @@
+.headerMainCont {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(237, 235, 235, 0.74);
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.headerMainContItems {
+  display: flex;
+  gap: 10px;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 96%;
+}
+
+.headerMainContItems > svg {
+  width: 24px;
+  height: 24px;
+  margin: 0 12px;
+  display: none;
+  cursor: pointer;
+}
+
+.navCont {
+  padding: 12px;
+  display: flex;
+  background-color: #ec5e2a;
+  border-radius: 10px;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.search {
+  background-color: #fff;
+  border: 1px solid #ec5e2a;
+  width: 50%;
+  padding: 12px;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 90%;
+}
+
+.cartCont {
+  padding: 12px;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.cartCont * {
+  color: #000;
+}
+
+.cartCont h4 {
+  display: flex;
+  gap: 10px;
+}
+
+.productQty {
+  position: absolute;
+  background-color: #ed6e40;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: 0;
+}
+
+.productQty span {
+  font-size: 14px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 1023px) {
+  .headerNavBar {
+    display: none;
+  }
+
+  .search,
+  .navCont {
+    display: none;
+  }
+
+  .cartCont h4 p {
+    display: none;
+  }
+
+  .cartCont {
+    background: none;
+  }
+
+  .cartCont a h4 img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .headerMainContItems a img {
+    width: 120px;
+    height: auto;
+  }
+
+  .spaceBtwn {
+    width: 100%;
+  }
+
+  .headerMainContItems > svg {
+    display: inline;
+  }
+}

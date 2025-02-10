@@ -188,30 +188,30 @@
 }
 
 .compCont img {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
 
 .buyBtn {
-    padding: 13px 20px;
-    color: #ec5e2a;
-    background-color: #fff;
-    border-radius: 6px;
-    border: none;
-    font-weight: 600;
+  padding: 13px 20px;
+  color: #ec5e2a;
+  background-color: #fff;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
 }
 
 .respPrice {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .respPrevPrice {
-    color: #fff;
-    text-decoration: line-through #fff;
-    font-size: 14px;
-    margin-left: 10px;
+  color: #fff;
+  text-decoration: line-through #fff;
+  font-size: 14px;
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 1220px) {
@@ -232,7 +232,7 @@
   }
 }
 
-@media screen  and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .mainCont {
     display: flex;
     flex-direction: column;

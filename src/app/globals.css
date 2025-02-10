@@ -8,15 +8,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  position: fixed;
+  display: none;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #e49f86;
-  border-radius: 20px;
-  position: fixed;
-}
-
-.nextjs-static-indicator-toast-icon {
   display: none;
 }

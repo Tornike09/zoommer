@@ -39,7 +39,7 @@ export const MenuContent: React.FC<IMenuContentProps> = ({
   }
 
   return (
-    <div className={styles.manuContentWrapper}>
+    <div className={styles.menuContentWrapper}>
       <ul>
         {products.length > 0 &&
           products.map((product) => (

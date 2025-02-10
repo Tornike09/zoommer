@@ -1,29 +1,29 @@
 .mainCont {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .cont {
-    max-width: 1200px;
-    width: 96%;
-    display: flex;
-    justify-content: space-between;
+  max-width: 1200px;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .filterCont {
-    width: 450px;
-    margin-right: 40px;
+  width: 450px;
+  margin-right: 40px;
 }
 
 @media screen and (max-width: 768px) {
-    .cont {
-        display: flex;
-        flex-direction: column;
-    }
+  .cont {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .filterCont {
-        width: auto;
-    }
+  .filterCont {
+    width: auto;
+  }
 }
